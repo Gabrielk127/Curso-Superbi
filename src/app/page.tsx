@@ -53,7 +53,7 @@ export default function Home() {
           initial={{ width: "0%" }}
           animate={{ width: ["0%", "100%", "0%"] }}
           transition={{
-            duration: 2,
+            duration: 15,
             ease: "easeInOut",
             times: [0, 0.5, 1],
             repeat: Infinity,
