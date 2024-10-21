@@ -2,22 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.glass-bg {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.05)
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(10, 10, 10, 0.7),
+      /* Cor escura com um pouco de transparência */ #0a0a0a
+        /* Cor sólida na parte inferior */
+    ); /* Gradiente que termina na cor sólida */
+  border-radius: 16px; /* Bordas arredondadas */
+  backdrop-filter: blur(15px); /* Blur mais intenso */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Borda com mais opacidade */
+  color: #fff; /* Cor do texto, pode ser ajustada */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Adicional: Para um efeito de hover */
+.glass-bg:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+  transition: box-shadow 0.3s ease; /* Transição suave ao passar o mouse */
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.glass-effect {
+  background: rgba(255, 255, 255, 0.02); /* Fundo mais transparente */
+  backdrop-filter: blur(20px); /* Efeito de desfoque */
+  -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Bordas mais suaves */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Sombra leve */
+}
+
+.will-change-transform {
+  will-change: transform;
+  position: relative;
+  z-index: 1; /* Aumente se necessário */
+}
+
+.glass-bg-faq {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.05)
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(10, 10, 10, 0.7),
+      /* Cor escura com um pouco de transparência */ #0a0a0a
+        /* Cor sólida na parte inferior */
+    ); /* Gradiente que termina na cor sólida */
+  backdrop-filter: blur(15px); /* Blur mais intenso */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+  color: #fff; /* Cor do texto, pode ser ajustada */
 }
 
 @layer utilities {
