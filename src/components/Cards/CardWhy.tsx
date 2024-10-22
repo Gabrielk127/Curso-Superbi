@@ -69,7 +69,7 @@ const CardWhy = () => {
         ))}
       </div>
       <motion.button
-        className="mt-16 py-4 px-8 text-xl bg-pink-500 flex flex-row gap-4 rounded-3xl items-center"
+        className="mt-16 py-4 px-8 text-lg w-80 justify-between md:text-xl bg-pink-500 flex flex-row gap-4 rounded-3xl items-center"
         variants={buttonVariants}
         whileHover="hover"
         whileTap="tap"

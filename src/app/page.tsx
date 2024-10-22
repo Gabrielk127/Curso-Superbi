@@ -9,10 +9,13 @@ import { motion } from "framer-motion";
 import CarouselImage from "@/components/Carousels/CarouselImage";
 import CardWhy from "@/components/Cards/CardWhy";
 import Faq from "@/components/Faq";
+import About from "@/components/About";
+import InstagramCard from "@/components/InstagramCard";
+import CourseCard from "@/components/Cards/CourseCard";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
-  const videoRef = useRef<HTMLDivElement | null>(null); // Especifica o tipo da referência
+  const videoRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     setIsClient(true);
@@ -35,7 +38,10 @@ export default function Home() {
           <Header />
         </header>
       </div>
-      <section className="px-8 max-w-[1200px] mx-auto z-[-10] flex flex-col justify-center items-center pt-52">
+      <section
+        id="inicio"
+        className="px-8 max-w-[1200px] mx-auto z-[-10] flex flex-col justify-center items-center pt-44"
+      >
         <p className="text-gray-400 font-bold text-center px-4 py-2 glass-bg mb-8">
           Inscrições Abertas
         </p>
@@ -88,21 +94,31 @@ export default function Home() {
         </p>
         <Carousel />
       </section>
-      <section className="pt-32 max-w-[1200px] mx-auto px-8 relative">
-        <div className="relative z-10">
+      <section className="pt-32 max-w-[1200px] mx-auto px-4 relative">
+        <div id="tecnicas" className="relative z-10">
           <CardWhy />
         </div>
       </section>
       <section className="py-24">
         <CarouselImage />
       </section>
-      <section className=" max-w-[1200px] mx-auto px-8 relative">
+      <section id="conteudo" className=" max-w-[1200px] mx-auto px-4 relative">
         <CardModules />
       </section>
-      <section className="max-w-[1200px] mx-auto pt-32">
+      <section id="sobre" className="pt-32 px-4 max-w-[1200px] mx-auto">
+        <About />
+      </section>
+      <section className="max-w-[1200px] mx-auto pt-32 px-4">
+        <CourseCard
+          whatsappLink="https://wa.me/5511999999999" // Substitua pelo seu link do WhatsApp
+        />
+      </section>
+      <section className="max-w-[1200px] mx-auto pt-32 px-4">
+        <InstagramCard />
+      </section>
+      <section id="faq" className="max-w-[1200px] mx-auto pt-32">
         <Faq />
       </section>
-      <section></section>
     </div>
   );
 }

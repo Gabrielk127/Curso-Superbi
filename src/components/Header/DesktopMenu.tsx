@@ -2,7 +2,13 @@
 import { motion } from "framer-motion";
 
 const DesktopMenu = () => {
-  const menuItems = ["Início", "Sobre", "Conteúdo", "Técnicas", "FAQ"];
+  const menuItems = [
+    { label: "Início", href: "#inicio" },
+    { label: "Sobre", href: "#sobre" },
+    { label: "Conteúdo", href: "#conteudo" },
+    { label: "Técnicas", href: "#tecnicas" },
+    { label: "FAQ", href: "#faq" },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-30 backdrop-blur-lg shadow-lg py-4 max-w-[1200px] rounded-3xl mx-auto mt-4">
@@ -12,7 +18,7 @@ const DesktopMenu = () => {
           className="text-white text-3xl font-bold cursor-pointer"
           whileHover={{ scale: 1.05 }}
         >
-          <a href="#">
+          <a href="#inicio">
             Método <span className="text-pink-500">Superbi</span>
           </a>
         </motion.div>
@@ -31,10 +37,10 @@ const DesktopMenu = () => {
               }}
             >
               <a
-                href="#"
+                href={item.href}
                 className="text-white text-lg hover:text-pink-500 transition"
               >
-                {item}
+                {item.label}
               </a>
 
               {/* Barra deslizante abaixo do texto ao passar o mouse */}
