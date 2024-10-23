@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
-import { FaStar } from "react-icons/fa";
+import { Star } from "lucide-react";
 
 interface CourseCardProps {
   whatsappLink: string;
@@ -8,84 +10,84 @@ interface CourseCardProps {
 
 const CourseCard: React.FC<CourseCardProps> = ({ whatsappLink }) => {
   const benefits = [
-    {
-      icon: <FaStar className="text-white" />,
-      label: "Lorem ipsum dolor sit amet",
-    },
-    {
-      icon: <FaStar className="text-white" />,
-      label: "Lorem ipsum dolor sit amet",
-    },
-    {
-      icon: <FaStar className="text-white" />,
-      label: "Lorem ipsum dolor sit amet",
-    },
-
-    {
-      icon: <FaStar className="text-white" />,
-      label: "Lorem ipsum dolor sit amet",
-    },
-    {
-      icon: <FaStar className="text-white" />,
-      label: "Lorem ipsum dolor sit amet",
-    },
+    "Lorem ipsum dolor sit amet",
+    "Consectetur adipiscing elit",
+    "Sed do eiusmod tempor incididunt",
+    "Ut labore et dolore magna aliqua",
+    "Ut enim ad minim veniam",
   ];
+
   const handleClick = () => {
     window.open(whatsappLink, "_blank");
   };
+
   return (
     <motion.div
-      className="glass-effect text-white rounded-3xl p-12 mx-auto shadow-lg hover:shadow-2xl transition-shadow duration-300 w-full max-w-[500px]"
-      initial={{ opacity: 0, y: 20 }}
+      className="bg-gradient-to-br from-gray-900 to-black text-white rounded-3xl p-8 mx-auto shadow-lg hover:shadow-pink-500/20 transition-all duration-300 w-full max-w-[500px] overflow-hidden"
+      initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 20 }}
+      exit={{ opacity: 0, y: 50 }}
+      transition={{ duration: 0.5 }}
     >
-      <div className=" flex flex-col justify-between">
-        <div>
-          <motion.p
-            className="glass-effect w-full text-center rounded-3xl p-2 text-white mb-8"
-            initial={{ textShadow: "0 0 5px rgba(255, 0, 255, 0.5)", scale: 1 }}
-            animate={{
-              textShadow: [
-                "0 0 5px rgba(255, 0, 255, 0.5)",
-                "0 0 15px rgba(255, 0, 255, 1)",
-                "0 0 5px rgba(255, 0, 255, 0.5)",
-              ],
-              scale: [1, 1.05, 1],
-            }}
-            transition={{
-              duration: 1,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
+      <motion.div
+        className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 to-purple-500"
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      />
+      <motion.p
+        className="bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text text-center text-sm font-bold mb-6"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.7, duration: 0.5 }}
+      >
+        Preço exclusivo de Lançamento
+      </motion.p>
+      <motion.h2
+        className="text-4xl md:text-5xl font-bold mb-16 text-center"
+        initial={{ scale: 0.9 }}
+        animate={{ scale: 1 }}
+        transition={{ type: "spring", stiffness: 100 }}
+      >
+        Método <span className="text-pink-500">Superbi</span>
+      </motion.h2>
+      <motion.p
+        className="text-center text-3xl mt-4 mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+      >
+        <span className="text-5xl font-bold text-pink-500">R$ 349,99</span>{" "}
+        <span className="text-xl">à vista</span>
+      </motion.p>
+      <motion.hr
+        className="border-t border-gray-700 my-8"
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 0.5 }}
+      />
+      <ul className="space-y-4">
+        {benefits.map((benefit, index) => (
+          <motion.li
+            key={index}
+            className="flex items-center text-sm md:text-base"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: index * 0.1 + 0.5 }}
           >
-            Preço exclusivo de Lançamento
-          </motion.p>
-          <h2 className="text-3xl md:text-5xl font-bold mb-2">
-            Método <span className="text-pink-500">Superbi</span>
-          </h2>
-          <p className="text-white text-2xl mt-8">
-            <span className="text-4xl font-bold">R$ 349,99</span> à/vista
-          </p>
-          <div className="border-b border-[0.5] border-gray-500 my-12" />
-        </div>
-        <div>
-          <ul className="space-y-8">
-            {benefits.map((benefit, index) => (
-              <li key={index} className="flex items-center">
-                <span className="mr-3 text-lg">{benefit.icon}</span>
-                {benefit.label}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <button
+            <Star className="mr-3 text-pink-500 h-5 w-5" />
+            {benefit}
+          </motion.li>
+        ))}
+      </ul>
+      <motion.button
         onClick={handleClick}
-        className="bg-pink-500 text-white font-bold py-4 px-4 rounded transition duration-200 w-full mt-12"
+        className="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold py-4 px-6 rounded-full w-full mt-8 hover:shadow-lg hover:shadow-pink-500/50 transition-all duration-300"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
       >
         Entre em contato
-      </button>
+      </motion.button>
     </motion.div>
   );
 };
