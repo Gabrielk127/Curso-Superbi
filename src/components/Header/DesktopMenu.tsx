@@ -7,12 +7,12 @@ const DesktopMenu = () => {
     { label: "Sobre", href: "#sobre" },
     { label: "Conteúdo", href: "#conteudo" },
     { label: "Técnicas", href: "#tecnicas" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Perguntas Frequentes", href: "#perguntas frequentes" },
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-30 backdrop-blur-lg shadow-lg py-4 max-w-[1200px] rounded-3xl mx-auto mt-4">
-      <div className="container mx-auto flex justify-between items-center px-8 ">
+      <div className="container mx-auto flex justify-between items-center px-8 gap-4">
         {/* Logo ou Nome do Site */}
         <motion.div
           className="text-white text-3xl font-bold cursor-pointer"
@@ -38,7 +38,7 @@ const DesktopMenu = () => {
             >
               <a
                 href={item.href}
-                className="text-white text-lg hover:text-pink-500 transition"
+                className="text-white text-lg hover:text-pink-500 transition text-nowrap"
               >
                 {item.label}
               </a>

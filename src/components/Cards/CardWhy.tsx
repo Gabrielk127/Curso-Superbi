@@ -68,14 +68,16 @@ const CardWhy = () => {
           </div>
         ))}
       </div>
-      <motion.button
-        className="mt-16 py-4 px-8 text-lg w-80 justify-between md:text-xl bg-pink-500 flex flex-row gap-4 rounded-3xl items-center"
-        variants={buttonVariants}
-        whileHover="hover"
-        whileTap="tap"
-      >
-        Garanta seu acesso! <IoIosArrowDown size={32} />
-      </motion.button>
+      <a href="#course">
+        <motion.button
+          className="mt-16 py-4 px-8 text-lg w-80 justify-between md:text-xl bg-pink-500 flex flex-row gap-4 rounded-3xl items-center"
+          variants={buttonVariants}
+          whileHover="hover"
+          whileTap="tap"
+        >
+          Garanta seu acesso! <IoIosArrowDown size={32} />
+        </motion.button>
+      </a>
     </motion.div>
   );
 };

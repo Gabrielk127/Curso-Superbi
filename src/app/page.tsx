@@ -12,6 +12,7 @@ import Faq from "@/components/Faq";
 import About from "@/components/About";
 import InstagramCard from "@/components/InstagramCard";
 import CourseCard from "@/components/Cards/CourseCard";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
@@ -32,7 +33,7 @@ export default function Home() {
 
   if (!isClient) return null;
   return (
-    <div className="pb-56">
+    <div>
       <div className="">
         <header>
           <Header />
@@ -69,7 +70,7 @@ export default function Home() {
         />
         <p
           className="text-gray-400 font-bold text-center pt-24
-        xl:text-2xl xl:max-w-[800px] xl:mx-auto xl:pt-16
+        xl:text-2xl max-w-[800px] xl:mx-auto xl:pt-16
         "
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
@@ -108,17 +109,57 @@ export default function Home() {
       <section id="sobre" className="pt-32 px-4 max-w-[1200px] mx-auto">
         <About />
       </section>
-      <section className="max-w-[1200px] mx-auto pt-32 px-4">
-        <CourseCard
-          whatsappLink="https://wa.me/5511999999999" // Substitua pelo seu link do WhatsApp
+      <section
+        id="course"
+        className="max-w-[1200px] mx-auto pt-32 px-4 flex flex-col items-center"
+      >
+        <p className="text-gray-400 font-bold text-center px-4 py-2 glass-bg mb-4">
+          Acesso ao Curso
+        </p>
+        <h1
+          className="text-white font-bold text-center text-4xl
+          md:text-5xl
+          xl:text-7xl xl:pt-16 
+        "
+        >
+          Curso Presencial
+        </h1>
+        <motion.div
+          className="h-1 bg-pink-500 mx-auto mt-1"
+          initial={{ width: "0%" }}
+          animate={{ width: ["0%", "50%", "0%"] }}
+          transition={{
+            duration: 15,
+            ease: "easeInOut",
+            times: [0, 0.5, 1],
+            repeat: Infinity,
+            repeatDelay: 0.5,
+          }}
+          aria-hidden="true"
         />
+        <p
+          className="text-gray-400 font-bold text-center py-8
+        xl:text-2xl max-w-[800px] xl:mx-auto
+        "
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          pretium quis sapien in laoreet. Pellentesque sollicitudin finibus
+          aliquam. Sed ac urna sapien.
+        </p>
+        <CourseCard whatsappLink="https://wa.me/5511999999999" />
       </section>
       <section className="max-w-[1200px] mx-auto pt-32 px-4">
         <InstagramCard />
       </section>
-      <section id="faq" className="max-w-[1200px] mx-auto pt-32">
+      <section
+        id="perguntas frequentes"
+        className="max-w-[1200px] mx-auto pt-32 pb-24"
+      >
         <Faq />
       </section>
+      <div className="mt-24">
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -92,7 +92,7 @@ const MobileMenu = () => {
             className="fixed inset-x-0 z-40 flex flex-col items-center justify-start h-full bg-black bg-opacity-30 backdrop-blur-lg shadow-lg text-white py-16 px-8 mx-4 mt-20 rounded-3xl rounded-b-xl"
           >
             <motion.ul className="space-y-8 text-center">
-              {["Início", "Sobre", "Conteúdo", "Técnicas", "FAQ"].map(
+              {["Início", "Sobre", "Conteúdo", "Técnicas", "Perguntas Frequentes"].map(
                 (item, index) => (
                   <motion.li
                     key={index}

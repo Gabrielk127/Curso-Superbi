@@ -38,8 +38,8 @@ export default function CarouselImage() {
     <div className="flex flex-col items-center justify-center">
       {/* Primeiro Carrossel: da esquerda para a direita */}
       <div className="overflow-hidden relative w-full mb-8">
-        <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#0A0A0A] to-transparent pointer-events-none shadow-md z-10" />
-        <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#0A0A0A] to-transparent pointer-events-none shadow-md z-10" />
+        <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-[#0A0A0A] to-transparent pointer-events-none shadow-md z-10" />
+        <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-[#0A0A0A] to-transparent pointer-events-none shadow-md z-10" />
 
         <div ref={carouselRef} className="flex animate-marquee-infinite">
           {/* Duplicando a lista de imagens para a animação infinita */}
@@ -59,8 +59,8 @@ export default function CarouselImage() {
 
       {/* Segundo Carrossel: da direita para a esquerda (inverso) */}
       <div className="overflow-hidden relative w-full">
-        <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#0A0A0A] to-transparent pointer-events-none shadow-lg z-10" />
-        <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#0A0A0A] to-transparent pointer-events-none shadow-lg z-10" />
+        <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-[#0A0A0A] to-transparent pointer-events-none shadow-lg z-10" />
+        <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-[#0A0A0A] to-transparent pointer-events-none shadow-lg z-10" />
 
         <div className="flex animate-marquee-reverse-infinite">
           {/* Duplicando a lista de imagens para a animação reversa infinita */}
@@ -98,7 +98,7 @@ export default function CarouselImage() {
 
         @keyframes marquee-reverse-infinite {
           0% {
-            transform: translateX(-250%);
+            transform: translateX(-300%);
           }
           100% {
             transform: translateX(50%);
