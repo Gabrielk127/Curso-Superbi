@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player/youtube";
 
 const YouTubeVideo = () => {
-  const videoUrl = "https://www.youtube.com/watch?v=klf2i7orNPs"; // URL corrigida
+  const videoUrl =
+    "https://www.youtube.com/watch?v=nBwMnDK4wNs&pp=ygUJdmlkZW9zIDRr"; // URL corrigida
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {

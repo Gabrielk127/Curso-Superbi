@@ -6,8 +6,8 @@ export default function Footer() {
     { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
     { label: "Conteúdo", href: "#conteudo" },
-    { label: "Técnicas", href: "#tecnicas" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Redes Sociais", href: "#redes" },
+    { label: "Perguntas frequentes", href: "#perguntas frequentes" },
   ];
 
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
               whileHover={{ scale: 1.05 }}
             >
               <a href="#inicio">
-                Método <span className="text-pink-500">Superbi</span>
+                Método <span className="text-gradient">Superbi</span>
               </a>
             </motion.div>
           </div>
@@ -30,7 +30,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-white hover:text-pink-500 transition"
+                    className="text-sm text-white hover:text-principal transition"
                   >
                     {item.label}
                   </Link>
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 text-center text-sm text-gray-400">
           <p>
-            &copy; {new Date().getFullYear()} Your Company Name. All rights
+            &copy; {new Date().getFullYear()} Método Superbi. All rights
             reserved.
           </p>
         </div>

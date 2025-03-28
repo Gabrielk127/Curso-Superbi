@@ -6,7 +6,7 @@ const DesktopMenu = () => {
     { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
     { label: "Conteúdo", href: "#conteudo" },
-    { label: "Técnicas", href: "#tecnicas" },
+    { label: "Redes Sociais", href: "#redes" },
     { label: "Perguntas Frequentes", href: "#perguntas frequentes" },
   ];
 
@@ -19,7 +19,7 @@ const DesktopMenu = () => {
           whileHover={{ scale: 1.05 }}
         >
           <a href="#inicio">
-            Método <span className="text-pink-500">Superbi</span>
+            Método <span className="text-gradient">Superbi</span>
           </a>
         </motion.div>
 
@@ -38,14 +38,14 @@ const DesktopMenu = () => {
             >
               <a
                 href={item.href}
-                className="text-white text-lg hover:text-pink-500 transition text-nowrap"
+                className="text-white text-lg hover:text-principal transition text-nowrap"
               >
                 {item.label}
               </a>
 
               {/* Barra deslizante abaixo do texto ao passar o mouse */}
               <motion.div
-                className="absolute left-0 bottom-0 h-0.5 bg-pink-500 w-full scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
+                className="absolute left-0 bottom-0 h-0.5 bg-gradient w-full scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
                 layoutId="underline"
                 transition={{ type: "spring", stiffness: 200, damping: 30 }}
               />

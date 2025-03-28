@@ -2,26 +2,42 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import img1 from "@/app/assets/img1.jpg";
-import img3 from "@/app/assets/img3.jpg";
-import img4 from "@/app/assets/img4.jpg";
-import img5 from "@/app/assets/img5.jpg";
-import img6 from "@/app/assets/img6.jpg";
-import img7 from "@/app/assets/img7.jpg";
+import img1 from "@/app/assets/Clientes/img1.jpg";
+import img3 from "@/app/assets/Clientes/img2.jpeg";
+import img4 from "@/app/assets/Clientes/img3.jpeg";
+import img5 from "@/app/assets/Clientes/img4.jpg";
+import img6 from "@/app/assets/Clientes/img5.jpg";
+import img7 from "@/app/assets/Clientes/img6.jpeg";
+import img8 from "@/app/assets/Clientes/img7.jpg";
+import img9 from "@/app/assets/Clientes/img8.jpg";
+import img10 from "@/app/assets/Clientes/img9.jpg";
+import img11 from "@/app/assets/Clientes/img10.jpg";
+import img12 from "@/app/assets/Clientes/img11.jpg";
+import img13 from "@/app/assets/Clientes/img12.jpg";
+import img14 from "@/app/assets/Clientes/img13.jpeg";
+import img15 from "@/app/assets/Clientes/img14.jpeg";
 
 const images = [
+  img6,
+  img9,
+  img7,
+  img8,
+  img10,
+  img11,
+  img13,
+  img14,
+  img12,
+  img15,
   img1,
   img3,
   img4,
-  img5,
   img6,
   img7,
   img1,
   img3,
+  img5,
   img4,
   img5,
-  img6,
-  img7,
 ];
 
 export default function CarouselImage() {

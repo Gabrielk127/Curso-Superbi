@@ -63,9 +63,15 @@ const MobileMenu = () => {
     <div className="relative">
       {/* Header fixo com o ícone do menu */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-30 backdrop-blur-lg shadow-lg py-4 max-w-[1200px] rounded-3xl mt-4 mx-4 flex justify-between items-center px-6">
-        <div className="text-white text-xl font-bold">
-          <a href="#inicio">Método Superbi</a>
-        </div>
+        <motion.div
+          className="text-white text-xl font-bold cursor-pointer"
+          whileHover={{ scale: 1.05 }}
+        >
+          <a href="#inicio">
+            Método <span className="text-gradient">Superbi</span>
+          </a>
+        </motion.div>
+
         <button onClick={toggleMenu} className="z-50">
           <motion.div
             initial={{ rotate: 0 }}
@@ -92,7 +98,7 @@ const MobileMenu = () => {
             className="fixed inset-x-0 z-40 flex flex-col items-center justify-start h-full bg-black bg-opacity-30 backdrop-blur-lg shadow-lg text-white py-16 px-8 mx-4 mt-20 rounded-3xl rounded-b-xl"
           >
             <motion.ul className="space-y-8 text-center">
-              {["Início", "Sobre", "Conteúdo", "Técnicas", "Perguntas Frequentes"].map(
+              {["Início", "Sobre", "Conteúdo", "Perguntas Frequentes"].map(
                 (item, index) => (
                   <motion.li
                     key={index}
@@ -100,7 +106,7 @@ const MobileMenu = () => {
                     initial="hidden"
                     animate="visible"
                     variants={itemVariants}
-                    className="text-xl hover:text-pink-500 cursor-pointer transition duration-300"
+                    className="text-xl hover:text-principal cursor-pointer transition duration-300"
                     onClick={() => handleNavigation(item)}
                   >
                     {item}
@@ -114,9 +120,15 @@ const MobileMenu = () => {
               animate={{ opacity: 1, y: 0, transition: { delay: 0.5 } }}
               className="mt-8"
             >
-              <button className="bg-pink-500 text-white px-6 py-3 rounded-full hover:bg-pink-600 transition duration-300">
-                Garanta seu Acesso
-              </button>
+              <a
+                href="https://wa.me/5543996033429?text=Ol%C3%A1,%20tenho%20interesse%20no%20M%C3%A9todo%20Superbi!
+"
+                target="_blank"
+              >
+                <button className="bg-gradient text-black px-6 py-3 rounded-full hover:bg-principal transition duration-300">
+                  Garanta seu Acesso
+                </button>
+              </a>
             </motion.div>
           </motion.div>
         )}

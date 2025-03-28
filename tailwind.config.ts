@@ -8,10 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      colors: {},
+      textColor: {
+        principal: "#FFD700",
       },
+      backgroundColor: { principal: "#FFD700" },
     },
   },
   plugins: [],

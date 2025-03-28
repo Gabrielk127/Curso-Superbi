@@ -67,3 +67,22 @@
 html {
   scroll-behavior: smooth;
 }
+
+.bg-gradient {
+  background: linear-gradient(
+    to right,
+    #ffd700,
+    #ffec8b
+  ); /* Gradiente do dourado até tons mais claros */
+}
+
+.text-gradient {
+  background: linear-gradient(
+    to right,
+    #ffd700,
+    #ffec8b
+  ); /* Gradiente do dourado até o amarelo claro */
+  -webkit-background-clip: text; /* Para Safari */
+  background-clip: text;
+  color: transparent; /* Deixa o texto transparente para o gradiente aparecer */
+}

@@ -9,7 +9,7 @@ import {
   useTransform,
   useInView,
 } from "framer-motion";
-import img from "@/app/assets/img1.jpg";
+import img from "@/app/assets/profile.jpg";
 
 export default function SobreProfessora3() {
   const controls = useAnimation();
@@ -59,7 +59,7 @@ export default function SobreProfessora3() {
               initial={{ height: "100%" }}
               animate={{ height: 0 }}
               transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
-              className="absolute inset-0 bg-pink-500 z-10"
+              className="absolute inset-0 bg-gradient z-10"
             />
           </motion.div>
 
@@ -74,24 +74,24 @@ export default function SobreProfessora3() {
             }}
             className="space-y-6 text-center mt-12 md:mt-0 md:text-start"
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold text-pink-500">
-              Ana Silva
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gradient">
+              Fernanda Superbi
             </h2>
             <h3 className="text-2xl md:text-3xl font-semibold text-gray-300">
               Especialista em Beleza e Estética
             </h3>
             <p className="text-lg text-gray-400 leading-relaxed">
-              Com mais de 15 anos de experiência no mundo da beleza, Ana Silva é
-              reconhecida internacionalmente por sua expertise em técnicas de
-              maquiagem e cuidados com a pele. Formada pelas melhores escolas de
-              estética da Europa, ela traz para o Brasil as últimas tendências e
-              inovações do setor.
+              Eu sou Fernanda, mãe de uma criança abençoada, o Samuel, e esposa
+              de um marido dedicado, o Andriw. Sou empreendedora, proprietária
+              do Studio Fernanda Superbi Beauty, e mentora de mulheres incríveis
+              que tomaram a decisão de transformar suas vidas, assim como eu fiz
+              há alguns anos.
             </p>
             <p className="text-lg text-gray-400 leading-relaxed">
-              Sua paixão por ensinar e compartilhar conhecimento a levou a criar
-              este curso exclusivo, onde você aprenderá não apenas técnicas, mas
-              também como despertar sua criatividade e construir uma carreira de
-              sucesso na indústria da beleza.
+              Me especializei com profissionais renomadas, com formações tanto
+              no Brasil quanto no exterior, sempre buscando a excelência na área
+              de extensão de cílios. Hoje, vivo o sonho de ter meu espaço em uma
+              das regiões mais bem localizadas de Londrina.
             </p>
             {/* <motion.div
               variants={{
@@ -115,11 +115,11 @@ export default function SobreProfessora3() {
 
         <motion.div
           style={{ y: useTransform(scrollYProgress, [0, 1], [50, -50]) }}
-          className="absolute -bottom-20 -left-20 w-20 h-20 bg-pink-500 rounded-full opacity-20 blur-xl"
+          className="absolute -bottom-20 -left-20 w-20 h-20 bg-gradient rounded-full opacity-20 blur-xl"
         />
         <motion.div
           style={{ y: useTransform(scrollYProgress, [0, 1], [-50, 50]) }}
-          className="absolute -top-20 -right-20 w-40 h-40 bg-pink-500 rounded-full opacity-20 blur-xl"
+          className="absolute -top-20 -right-20 w-40 h-40 bg-gradient rounded-full opacity-20 blur-xl"
         />
       </div>
     </section>
