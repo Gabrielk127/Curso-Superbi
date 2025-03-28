@@ -36,7 +36,7 @@ export default function ContactSection() {
               <Mail className="h-7 w-7" style={{ color: "#FFD700" }} />
             </div>
             <h3 className="text-xl font-semibold mb-2">E-mail</h3>
-            <p className="text-gray-300">contato@metodosuperbi@gmail.com</p>
+            <p className="text-gray-300">contato.metodosuperbi@gmail.com</p>
           </div>
 
           {/* Card de Endereço */}
